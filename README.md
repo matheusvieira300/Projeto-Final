@@ -41,6 +41,41 @@ quando o e-mail da secretária já existe no sistema a mensagem <b>E-mail já ex
 na aba login ao logar com um usuário <b>padrão(Secretária)</b> o sistema irá direcionar para a página index da Secretária. E ao logar com um usuário <b>admin(Doutor)</b> o sistema irá direcionar para a página index do Doutor.
 ![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/be1c82dd-1f6d-451e-a0a7-c01102061a6e)
 
+<b>E-mail ou Senha Incorretos:</b>
+ao tentar logar com um e-mail ou senha incorreto a mensagem <b>E-mail ou Senha Inválidos</b> é exibida
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/0af3ab99-e411-4e74-b379-469600fbad6d)
+
+## Páginal Inicial Doutor
+Na página incial do Doutor é apresentado alguns dados dos Pacientes cadastrados no sistema além de uma barra de pesquisa para pesquisar pelo nome do Paciente, além disso também é exibido um botão de Logout para deslogar o doutor atual do sistema.
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/6f999390-bad0-44ef-b646-7afed6fa3aed)
+
+## Cadastrar Paciente
+Na página cadastro de pacientes temos alguns campos para preencher referentes ao paciente que iremos cadastrar no sistema.
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/0ec6f538-6c56-4137-bd47-400c05d6dfde)
+
+<b>Erro de CPF:</b>
+Caso o CPF digitado tenha mais que 11 digítos ao tentar cadastrar será exibido o erro.
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/8011601b-cc05-4f3f-b56e-767b5c557b71)
+
+<b>CEP Existente:</b> Ao digitar o número de um CEP existente os campos: Endereço,Bairro,Cidade e Estado são preenchidos automaticamente.
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/9b12ccd9-cf89-4839-83bc-10cf34a7fd3c)
+
+<b>CEP Inexistente:</b> 
+Ao digitar um CEP inexistente é apresentada uma mensagem de CEP não encontrado.
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/52171711-67b0-4b46-bec9-e61bcf89f349)
+
+<b>Efetuar Cadastro:</b>
+Ao digitar os dados e clicar em Cadastrar, é exibida uma mensagem para clicar em <b>OK</b> para cadastrar o Paciente e <b>Cancel</b> para Cancelar o cadastro.
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/f2a77113-7cde-4415-b01e-1a234efc36de)
+
+## Excluir Paciente
+Ao clicar no botão excluir do Paciente Cadastrado é exibida uma mensagem para clicar em OK para exclusão e Cancel para cancelar a Exclusão.
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/fdf2f140-dbc2-4df0-af63-83e08f80ac74)
+
+## Editar Paciente
+O Editar Paciente possui o mesmo compartamento do Cadastrar Paciente, porém é preenchido os campos com os dados do Paciente a ser alterado para poder alterar todos os dados do Paciente já existente.
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/3eae6b00-fd83-4a11-86aa-c7fdf31b48c0)
+
 
 # Autor
 
