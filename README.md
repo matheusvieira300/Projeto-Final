@@ -17,7 +17,7 @@ O projeto trata-se de um sistema de Cadastro de Pacientes automatizado que visa 
 - Thymeleaf
 - Bootstrap
 
-## Funcionalidades
+# Funcionalidades
 ## Home
 Na página home contém uma descrição do que se trata o sistema Clinic Time
 ![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/adb655b5-d232-4907-857f-98f0ab77f8b5)
