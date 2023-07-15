@@ -1,6 +1,4 @@
-# Projeto-Final
-
-# Clinic Time
+# Projeto Final - Clinic Time
 
 ## Sobre o Projeto
 O projeto trata-se de um sistema de Cadastro de Pacientes automatizado que visa simplificar o processo de registro e gerenciamento de pacientes em consultórios médicos. Através deste sistema, os usuários terão acesso a um painel de controle para cadastrar novos pacientes e gerenciar informações relevantes. Com isso, será possível obter uma melhor organização dos registros, facilitar o acesso aos dados e evitar duplicações, proporcionando mais eficiência e praticidade no atendimento aos pacientes.
@@ -76,7 +74,39 @@ Ao clicar no botão excluir do Paciente Cadastrado é exibida uma mensagem para 
 O Editar Paciente possui o mesmo compartamento do Cadastrar Paciente, porém é preenchido os campos com os dados do Paciente a ser alterado para poder alterar todos os dados do Paciente já existente.
 ![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/3eae6b00-fd83-4a11-86aa-c7fdf31b48c0)
 
+## Cadastrar Doutor
+<b>Cadastro Efetuado:</b> Ao tentar cadastrar um Doutor é verificado se o e-mail já existe cadastrado como Secretária ou Doutor, caso não esteja cadastrado ainda é exibida a mensagem Registrado com Sucesso!
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/5fb2e43f-2f25-4d06-b065-0abbd77a32cc)
+
+<b>E-mail Já Existente:</b> Ao tentar cadastar um Doutor caso o e-mail já foi cadastrado como Secretária ou Doutor a mensagem, E-mail já existe é exibida e não é efetuado o cadastro.
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/540e9793-fb93-4ebe-853f-b81fdc7a57d0)
+
+## Secretárias
+Na página Secretárias é listado todas as secretárias cadastradas no sistema, além disso temos a barra de pesquisa para pesquisar uma secretária pelo nome e temos os botões de <b>NOVO</b> para cadastrar uma nova secretária, <b>Editar</b> para editar uma secretária e <b>Excluir</b> para Excluir uma secretária.
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/b838c35e-7804-43f1-955e-26c21cfc591b)
+
+## Cadastrar Secretária
+Na página de Cadastro de Secretária possuimos os campos Nome,E-mail e senha para efetuar o cadastro da secretária, caso o e-mail digitado já exista seja cadastrado como Doutor ou Secretária a mensagem de Erro <b>E-mail já existe</b> é exibida.
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/8f484216-da1c-4346-8567-fdbac7879614)
+
+
+## Página Inicial Secretária
+Ao logar com o usuário de uma Secretária, o usuário terá acesso a lista dos pacientes cadastrados, barra de pesquisa para pesquisar os Pacientes, irá poder Cadastrar um paciente ao clicar no botão <b>NOVO</b> vai poder Editar um paciente ao clicar no botão <b>Editar</b> e excluir um paciente ao clicar no botão <b>Excluir.</b>
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/51f32982-a276-4a0d-a8ca-f22384b5b85b)
+
+
+
+
+## Logout
+Ao clicar no botão de Logout é exibida a mensagem de Confirmação para escolher <b>sim</b> para deslogar o usuário atual do sistema, seja um Doutor ou uma Secretária, e <b>Não</b> para não efetuar o Logout do usuário atual.</br>
+<b>Logout Doutor:</b>
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/04e2c5c8-f8e5-426b-a034-b3cbe0a274a8)
+
+<b>Logout Secretária:</b>
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/75de51a1-4bed-41ac-a5e2-e42c5533ffc9)
+
+
+
 
 # Autor
-
 Matheus Gomes Vieira
