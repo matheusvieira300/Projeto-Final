@@ -74,6 +74,19 @@ Ao clicar no botão excluir do Paciente Cadastrado é exibida uma mensagem para 
 O Editar Paciente possui o mesmo compartamento do Cadastrar Paciente, porém é preenchido os campos com os dados do Paciente a ser alterado para poder alterar todos os dados do Paciente já existente.
 ![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/3eae6b00-fd83-4a11-86aa-c7fdf31b48c0)
 
+## Consultar Paciente
+O consultar Paciente seria a página aonde o Doutor pode realizar a prescrição da receita ao paciente e gerar a mesma em PDF
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/f9e33ac0-152a-4513-8e6a-6e2373c3eace)
+</br>
+
+<b>Efetuado dowload da Receita:</b>
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/39f865a1-b6b7-4bc1-af80-7615aac40b81)
+
+</br>
+
+<b>Receita em PDF:</b>
+![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/bc22897f-406e-4995-befb-aa24ffa7a6ff)
+
 ## Cadastrar Doutor
 <b>Cadastro Efetuado:</b> Ao tentar cadastrar um Doutor é verificado se o e-mail já existe cadastrado como Secretária ou Doutor, caso não esteja cadastrado ainda é exibida a mensagem Registrado com Sucesso!
 ![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/5fb2e43f-2f25-4d06-b065-0abbd77a32cc)
