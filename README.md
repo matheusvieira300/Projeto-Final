@@ -99,6 +99,7 @@ Ao logar com o usuário de uma Secretária, o usuário terá acesso a lista dos 
 
 ## Logout
 Ao clicar no botão de Logout é exibida a mensagem de Confirmação para escolher <b>sim</b> para deslogar o usuário atual do sistema, seja um Doutor ou uma Secretária, e <b>Não</b> para não efetuar o Logout do usuário atual.</br>
+</br>
 <b>Logout Doutor:</b>
 ![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/04e2c5c8-f8e5-426b-a034-b3cbe0a274a8)
 
