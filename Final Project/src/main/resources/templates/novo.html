@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Cadastrar um Novo Paciente</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/estiloDoCadastro.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/validadorDeCep.js"></script>
+</head>
+<body>
+
+<h1>Cadastrar um Novo Paciente</h1>
+
+<form th:action="@{/novo}" method="post" onsubmit="return confirm('Confirma ação')">
+
+    <p>
+        CRM:<input type="text" required id="crm" name="crm"/>
+    </p>
+
+    <p>
+        NOME:<input type="text" required id="nome" name="nome"/>
+    </p>
+
+    <p>
+        E-MAIl:<input type="text" required id="email" name="email"/>
+    </p>
+
+    <p>
+        SENHA:<input type="text" required id="password" name="password"/>
+    </p>
+
+    <p>
+        <input type="submit" value="Cadastrar"> <input type="reset" value="Reset">
+        <a th:href="@{/listar}">Voltar</a>
+    </p>
+
+</form>
+</body>
+</html>

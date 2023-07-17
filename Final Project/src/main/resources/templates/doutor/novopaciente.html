@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <link rel="stylesheet" href="/estiloDoCadastro.css" />
+  <script src="/validacep.js"></script>
+  <script src="/data.js"></script>
+  <script src="/validacoes.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <script>
+    $(function() {
+      $("#datepicker").datepicker();
+    });
+  </script>
+
+  <meta charset="UTF-8">
+  <title>Cadastrar Paciente</title>
+</head>
+
+<body th:replace="~{doutor/basedoutor::layout(~{::section})}">
+<section>
+  <h1>Cadastrar Paciente</h1>
+
+  <form id="cadastroPaciente" th:action="@{/doutores/novopaciente}" method="post">
+    <label>CPF:</label>
+    <input type="number" id="cpfInput" name="cpf" pattern="[0-9]*" required /><br>
+    <div th:text="${cpfError}" style="color: red;"></div>
+
+    <label>Nome:</label>
+    <input type="text" name="name" required /><br>
+
+    <label>Nome Da Mãe:</label>
+    <input type="text" name="nomeDaMae" required /><br>
+
+    <label>Nome Do Pai:</label>
+    <input type="text" name="nomeDoPai" required /><br>
+
+    <label>Telefone:</label>
+    <input type="tel" name="telefone" pattern="[0-9]*" inputmode="numeric" required /><br>
+
+    <label>Email:</label>
+    <input type="email" name="email" required /><br>
+
+    <label for="datepicker">Data de Nascimento:</label>
+    <input type="text" id="datepicker" name="nascimento" required /><br>
+
+    <label>CEP:</label>
+    <input type="text" name="cep" pattern="[0-9]*" inputmode="numeric" required
+           onblur="buscarEndereco()" />
+
+
+    <div id="cep-erro" class="form-text text-danger d-none">CEP não encontrado.</div>
+
+
+    <label for="logradouro">Endereço:</label>
+    <input type="text" id="logradouro" name="endereco" /><br>
+
+    <label for="complemento">Complemento:</label>
+    <input type="text" id="complemento" name="complemento" /><br>
+
+    <label for="bairro">Bairro:</label>
+    <input type="text" id="bairro" name="bairro" /><br>
+
+    <label for="localidade">Cidade:</label>
+    <input type="text" id="localidade" name="cidade" /><br>
+
+    <label for="uf">Estado:</label>
+    <input type="text" id="uf" name="estado" /><br>
+
+    <button onclick="return confirm('Quer cadastrar este Paciente ?')" type="submit">Cadastrar</button>
+
+    <button type="button" onclick="window.location.href='/doutores/'">Voltar</button>
+
+  </form>
+</section>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{doutor/basedoutor::layout(~{::section})}">
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+
+</head>
+<body>
+<section>
+
+  <div class="container p-3">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <div class="card-header text-center fs-4">Cadastro de Novo Doutor</div>
+
+
+          <th:block th:if="${session.msg}">
+            <p class="text-center fs-4 text-success">[[${session.msg}]]</p>
+            <!--<th:block th:text="${#session.removeAttribute('msg')}"></th:block>-->
+          </th:block>
+
+
+
+          <div class="card-body">
+            <form action="criardoutor" method="post">
+              <div class="mb-3">
+                <label>Nome</label> <input type="text"
+                                           name="name" class="form-control" required>
+              </div>
+
+              <div class="mb-3">
+                <label>CRM</label> <input type="number"
+                                           name="crm" class="form-control" min="0001" max="9999" required>
+              </div>
+
+              <div class="mb-3">
+                <label>E-Mail</label> <input type="email" name="email"
+                                             class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label>Senha</label> <input type="password"
+                                            name="password" class="form-control" required>
+              </div>
+              <button class="btn btn-success col-md-12">Cadastrar</button>
+
+              </br>
+              </br>
+
+            </form>
+
+            <button class="btn btn-primary col-md-12" onclick="window.location.href='/doutores/'">Voltar</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</section>
+
+
+</body>
+</html>

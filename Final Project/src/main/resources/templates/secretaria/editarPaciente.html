@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <script src="/validacep.js"></script>
+    <link rel="stylesheet" href="/estiloDoCadastro.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(function() {
+            $("#datepicker").datepicker();
+        });
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Editar Paciente</title>
+</head>
+
+<body th:replace="~{secretaria/baseSecretaria::layout(~{::section})}">
+<section>
+    <h1>Editar Paciente</h1>
+
+    <form th:action="@{/secretaria/alterarpaciente/{id}(id=${paciente.id})}" method="post" th:object="${paciente}">
+        <label>CPF:</label>
+        <input type="number" name="cpf" min="00000000001" max="99999999999" required th:value="${paciente.cpf}" /><br>
+
+        <label>Nome:</label>
+        <input type="text" name="name" required th:value="${paciente.name}" /><br>
+
+        <label>Nome Da Mãe:</label>
+        <input type="text" name="nomeDaMae" required th:value="${paciente.nomeDaMae}"/><br>
+
+        <label>Nome Do Pai:</label>
+        <input type="text" name="nomeDoPai" required th:value="${paciente.nomeDoPai}"/><br>
+
+        <label>Telefone:</label>
+        <input type="number" name="telefone" min="00000000001" max="99999999999" required th:value="${paciente.telefone}" /><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required th:value="${paciente.email}" /><br>
+
+        <label>Data de Nascimento:</label>
+        <input type="text" id="datepicker" name="nascimento" required th:value="${paciente.nascimento}" /><br>
+
+        <label>CEP:</label>
+        <input type="number" name="cep" min="00000001" max="99999999" required th:value="${paciente.cep}"
+               onblur="buscarEndereco()" /><br>
+
+
+        <div id="cep-erro" class="d-none">CEP inválido</div>
+
+        <label for="logradouro">Endereço:</label>
+        <input type="text" id="logradouro" name="endereco" th:value="${paciente.endereco}" /><br>
+
+        <label for="complemento">Complemento:</label>
+        <input type="text" id="complemento" name="complemento" th:value="${paciente.complemento}" /><br>
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" th:value="${paciente.bairro}" /><br>
+
+        <label for="localidade">Cidade:</label>
+        <input type="text" id="localidade" name="cidade" th:value="${paciente.cidade}" /><br>
+
+        <label for="uf">Estado:</label>
+        <input type="text" id="uf" name="estado" th:value="${paciente.estado}" /><br>
+
+
+        <button onclick="return confirm('Quer atualizar os dados desse Paciente ?')" type="submit">Atualizar</button>
+
+        <button type="button" onclick="window.location.href='/secretaria/'">Voltar</button>
+
+    </form>
+
+</section>
+</body>
+
+</html>

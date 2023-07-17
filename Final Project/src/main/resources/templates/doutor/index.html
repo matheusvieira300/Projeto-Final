@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta charset="UTF-8">
+    <title>Lista De Pacientes</title>
+    <link rel="stylesheet" href="/estiloDaListagem.css" />
+</head>
+
+<body th:replace="~{doutor/basedoutor::layout(~{::section})}">
+<section>
+    <h1 class="text-center">Lista De Pacientes</h1>
+
+    <div class="row">
+        <div class="col">
+            <form action="/doutores/pesquisar" method="get">
+                <div class="input-group">
+                    <input type="text" id="barraDePesquisa" name="name" class="form-control" placeholder="Pesquisar por Nome" />
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Pesquisar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col">
+            <a href="/doutores/novopaciente" class="btn btn-primary">NOVO</a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <table id="tabelaPacientes">
+        <tr>
+            <th>NOME</th>
+            <th>TELEFONE</th>
+            <th>NASCIMENTO</th>
+            <th>OPÇÕES</th>
+        </tr>
+
+        <tr th:each="paciente : ${listarPaciente}">
+            <td class="nome-paciente" th:text="${paciente.name}"></td>
+            <td th:text="${paciente.telefone}"></td>
+            <td th:text="${paciente.nascimento}"></td>
+            <td>
+                <a th:href="@{/doutores/consulta/{id}(id=${paciente.id})}" class="btn btn-success">Consultar</a>
+                <a th:href="@{/doutores/{id}/alterarpaciente(id=${paciente.id})}" class="btn btn-primary">Editar</a>
+                <a onclick="return confirm('Quer excluir este Paciente ?')" th:href="@{/doutores/{id}(id=${paciente.id})}" class="btn btn-danger">Excluir</a>
+            </td>
+        </tr>
+    </table>
+</section>
+
+<script src="/pesquisarPaciente.js"></script>
+</body>
+
+</html>

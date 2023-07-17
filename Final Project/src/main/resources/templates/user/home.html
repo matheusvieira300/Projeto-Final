@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<h1>User After Login: Home Page</h1>
+<a href="/logout">Logout</a>
+<form action="/logout" method="POST">
+    <input type="submit">Post Logout</input>
+</form>
+<h1>Name : [[${user.name}]]</h1>
+<h1>Email : [[${user.email}]]</h1>
+<h1>Role : [[${user.role}]]</h1>
+</body>
+</html>

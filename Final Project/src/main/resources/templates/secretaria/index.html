@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <link rel="stylesheet" href="/estiloDaListagem.css" />
+    <meta charset="UTF-8">
+    <title>Lista De Pacientes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body th:replace="~{secretaria/baseSecretaria::layout(~{::section})}">
+<section>
+    <h1 class="text-center">Lista De Pacientes</h1>
+
+    <div class="row">
+        <div class="col">
+            <form action="/secretaria/pesquisar" method="get">
+                <div class="input-group">
+                    <input type="text" id="barraDePesquisa" name="name" class="form-control" placeholder="Pesquisar por Nome" />
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Pesquisar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col">
+            <a th:href="@{/secretaria/novopaciente}" class="btn btn-primary">NOVO</a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <table id="tabelaPacientes">
+        <tr>
+            <th>NOME</th>
+            <th>TELEFONE</th>
+            <th>NASCIMENTO</th>
+            <th>OPÇÕES</th>
+        </tr>
+
+        <tr th:each="paciente : ${listarPaciente}">
+            <td th:text="${paciente.name}"></td>
+            <td th:text="${paciente.telefone}"></td>
+            <td th:text="${paciente.nascimento}"></td>
+            <td>
+                <a th:href="@{/secretaria/{id}/alterarpaciente(id=${paciente.id})}" class="btn btn-primary">Editar</a>
+                <a onclick="return confirm('Quer excluir este Paciente ?')" th:href="@{/secretaria/{id}(id=${paciente.id})}" class="btn btn-danger">Excluir</a>
+            </td>
+        </tr>
+    </table>
+</section>
+</body>
+
+</html>

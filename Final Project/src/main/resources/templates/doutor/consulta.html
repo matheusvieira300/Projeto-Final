@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta</title>
+    <link rel="stylesheet" href="/consulta.css" />
+</head>
+
+<body th:replace="~{doutor/basedoutor::layout(~{::section})}">
+<div th:fragment="section">
+    <div id="consulta-content">
+
+        <h1>Dados do Paciente:</h1>
+        <p>Nome: <span th:text="${consulta.paciente.name}"></span></p>
+        <p>Nome Da Mãe: <span th:text="${consulta.paciente.nomeDaMae}"></span></p>
+        <p>Nome Do Pai: <span th:text="${consulta.paciente.nomeDoPai}"></span></p>
+        <p>Email: <span th:text="${consulta.paciente.email}"></span></p>
+        <p>Telefone: <span th:text="${consulta.paciente.telefone}"></span></p>
+        <p>Data de Nascimento: <span th:text="${consulta.paciente.nascimento}"></span></p>
+        <p>Endereço: <span th:text="${consulta.paciente.endereco}"></span></p>
+        <p>Bairro: <span th:text="${consulta.paciente.bairro}"></span></p>
+        <p>Cidade: <span th:text="${consulta.paciente.cidade}"></span></p>
+
+        <form th:action="@{/doutores/consulta/{id}/salvar(id=${consulta.paciente.id})}" method="post"
+              th:object="${consulta}">
+
+            <h3>Receita:</h3>
+            <textarea name="receita" required th:text="${consulta.receita}"></textarea>
+
+            <button onclick="return confirm('Quer gerar a receita?')" type="submit">Gerar Receita</button>
+        </form></br>
+
+        <button type="button" onclick="window.location.href='/doutores/'">Voltar</button>
+
+
+        <h3>Receitas Anteriores:</h3>
+        <ul>
+            <li th:each="consultaAnterior : ${consultasAnteriores}">
+                <span th:text="${consultaAnterior.receita}"></span>
+            </li>
+        </ul>
+
+
+    </div>
+</div>
+</body>
+
+</html>
