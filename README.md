@@ -84,7 +84,9 @@ O consultar Paciente seria a página aonde o Doutor pode realizar a prescrição
 
 </br>
 
-<b>Receita em PDF:</b>
+<b>Exempo de Receita gerada em PDF:</b>
+Na receita são coletados o <b>CRM</b> e Nome do <b>Doutor</b> atual que está gerando a receita, o nome do <b>Paciente</b> que está sendo consultado e o que foi digitado no campo <b>Receita</b>. 
+
 ![image](https://github.com/matheusvieira300/Projeto-Final/assets/53275513/bc22897f-406e-4995-befb-aa24ffa7a6ff)
 
 ## Cadastrar Doutor
